@@ -1,0 +1,11 @@
+{
+  "name": "Developer handoff",
+  "id": "1173343953294737171",
+  "api": "1.0.0",
+  "main": "dist/code.js",
+  "editorType": [
+    "figma"
+  ],
+  "containsWidget": true,
+  "widgetApi": "1.0.0"
+}
