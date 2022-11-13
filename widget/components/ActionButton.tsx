@@ -3,7 +3,7 @@ import { themes } from "../themes";
 import type { PropFieldAction, Theme } from "../types";
 
 const { widget } = figma;
-const { AutoLayout, Text, SVG } = widget;
+const { AutoLayout, SVG } = widget;
 
 type ActionButtonProps = {
   disabled?: boolean;
@@ -19,6 +19,11 @@ export const ActionButton = ({
   onClick,
 }: ActionButtonProps) => {
   const buttonSize = 32;
+  const tooltips: { [key in PropFieldAction]: string } = {
+    moveUp: "Move up",
+    moveDown: "Move down",
+    delete: "Delete prop",
+  };
 
   return (
     <AutoLayout
@@ -38,6 +43,7 @@ export const ActionButton = ({
           : themes[theme].actionButtonHoverBackground,
       }}
       name="ActionButton"
+      tooltip={disabled ? undefined : tooltips[type]}
     >
       <SVG
         src={getActionIconSrc[type](

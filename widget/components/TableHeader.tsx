@@ -1,7 +1,6 @@
 import { themes } from "../themes";
-import { FormField } from "./FormField";
-import type { FormData, Theme } from "../types";
-import { initialValues, styles } from "../constants";
+import type { Theme } from "../types";
+import { styles } from "../constants";
 
 const { widget } = figma;
 const { AutoLayout, Text } = widget;
@@ -42,7 +41,11 @@ export const TableHeader = ({ theme }: { theme: Theme }) => {
     >
       <TableHeaderCell label="Prop" theme={theme} />
       <TableHeaderCell label="Type" theme={theme} />
-      <TableHeaderCell label="Required?" width={styles.requiredCellWidth} theme={theme} />
+      <TableHeaderCell
+        label="Required?"
+        width={styles.requiredCellWidth}
+        theme={theme}
+      />
       <TableHeaderCell
         label="Default value"
         width="fill-parent"

@@ -25,7 +25,7 @@ export const HTMLTagField = ({
   };
 
   const inputTextProps = {
-    fontSize: 14,
+    fontSize: styles.formFieldFontSize,
     fill: themes[theme].text,
     fontFamily: styles.codeFontFamily,
   };
@@ -36,6 +36,9 @@ export const HTMLTagField = ({
       direction="vertical"
       spacing={8}
       name="HTMLTagField"
+      tooltip={`${
+        isEditingEnabled ? "Click" : "Enable editing"
+      } to edit this field`}
     >
       <Text fill={themes[theme].text}>HTML tag</Text>
       {isEditingEnabled ? (

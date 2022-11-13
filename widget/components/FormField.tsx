@@ -1,3 +1,4 @@
+import { styles } from "../constants";
 import { themes } from "../themes";
 import type { Theme } from "../types";
 
@@ -16,7 +17,7 @@ interface FormFieldProps extends WidgetJSX.TextStyleProps {
 
 export const FormField = ({
   isEditingEnabled,
-  fontSize = 14,
+  fontSize = styles.formFieldFontSize,
   inputBehavior = "wrap",
   placeholder,
   theme,
@@ -40,10 +41,11 @@ export const FormField = ({
       width="fill-parent"
       inputBehavior={inputBehavior}
       name="FormField"
+      tooltip="Click to edit this field"
       {...inputProps}
     />
   ) : (
-    <AutoLayout width="fill-parent">
+    <AutoLayout width="fill-parent" tooltip="Enable editing to edit this field">
       <Text
         fontSize={fontSize}
         width="fill-parent"

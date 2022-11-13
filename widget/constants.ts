@@ -1,4 +1,5 @@
-import type { FormData } from "./types";
+import { placeholderTokens } from "./helpers/formatCode";
+import type { FormData, Theme } from "./types";
 
 export const emptyPropValues = {
   name: "",
@@ -11,7 +12,6 @@ export const initialValues: FormData = {
   name: "",
   description: "",
   htmlTag: "",
-  code: "",
   props: [emptyPropValues],
 };
 
@@ -20,6 +20,7 @@ export const styles = {
   cellWidth: 140,
   requiredCellWidth: 80,
   cellGap: 16,
+  formFieldFontSize: 14,
   buttonPadding: {
     left: 16,
     right: 16,

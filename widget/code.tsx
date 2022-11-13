@@ -151,12 +151,7 @@ function Widget() {
           value={formValues.htmlTag}
           setValue={(newValue) => updateFormField("htmlTag", newValue)}
         />
-        <CodeField
-          isEditingEnabled={isEditingEnabled}
-          theme={theme}
-          value={formValues.code}
-          setValue={(newValue) => updateFormField("code", newValue)}
-        />
+        <CodeField isEditingEnabled={isEditingEnabled} theme={theme} />
       </AutoLayout>
       <Divider theme={theme} />
       <TableHeader theme={theme} />
@@ -232,6 +227,9 @@ function Widget() {
                       )
                     : undefined
                 }
+                tooltip={`${
+                  isEditingEnabled ? "Click" : "Enable editing"
+                } to edit this field`}
               >
                 <AutoLayout
                   width={20}
