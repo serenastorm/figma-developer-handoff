@@ -10,7 +10,7 @@
 
 - [How to use](#how-to-use)
 - [Roadmap](#roadmap)
-- [Contributing](#contributing)
+- [Contributing](#contributing-and-acknowledgements)
 
 ## How to use
 
